@@ -1,10 +1,13 @@
 package subway;
 
-import java.util.Scanner;
+import subway.config.SubwayInitializer;
+import subway.controller.MainController;
 
 public class Application {
     public static void main(String[] args) {
-        final Scanner scanner = new Scanner(System.in);
-        // TODO: 프로그램 구현
+        MainController mainController = new MainController();
+        SubwayInitializer.initStations();
+        SubwayInitializer.initLines();
+        mainController.run();
     }
 }
